@@ -1,0 +1,24 @@
+kind: pipeline
+name: default
+
+steps:
+- name: clone submodules
+  image: docker:git
+  commands:
+  - git submodule update --init --recursive
+- name: build site
+  image: cibuilds/hugo
+  commands:
+  - hugo
+- name: deploy to s3
+  image: plugins/s3-sync
+  settings:
+    bucket: akhilvelagapudi.com
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    source: public
+    delete: true
+    cloudfront_distribution:
+      from_secret: aws_cloudfront_id

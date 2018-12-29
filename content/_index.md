@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 ---
 
 I'm a **software engineer**, currently working in the Bay Area. My biggest passions are back-end development and baseball. I also enjoy chess programming!

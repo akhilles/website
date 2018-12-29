@@ -1,7 +1,7 @@
 ---
 title: "Auto-Deploying Static Site to S3"
 date: 2018-09-22T14:44:04-07:00
-draft: true
+draft: false
 ---
 
 Static websites have a lot of advantages compared to dynamic web applications: easier to develop, cheaper to host, and better indexing for SEO. Performance is arguable; you might be able to match the TTFB and throughput of a static site with a well-configured reverse proxy, but why bother?
